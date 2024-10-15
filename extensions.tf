@@ -7,7 +7,7 @@ resource "azurerm_virtual_machine_extension" "installations" {
 
   settings = <<SETTINGS
     {
-        "script": "${filebase64("custom_scripts/installations.sh")}"
+        "script": "${filebase64("${path.module}/custom_scripts/installations.sh")}"
     }
 SETTINGS
 }
