@@ -12,7 +12,7 @@ resource "azurerm_network_interface" "jumphost_nic" {
 
   ip_configuration {
     name                          = "internal"
-    subnet_id                     = data.azurerm_subnet.jumphost_snet.id
+    subnet_id                     = var.snet_id
     private_ip_address_allocation = "Dynamic"
     public_ip_address_id          = azurerm_public_ip.jumphost_pip.id
   }
