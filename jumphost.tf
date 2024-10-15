@@ -1,7 +1,7 @@
 resource "azurerm_linux_virtual_machine" "jumphost" {
   name                = "vm-jumphost-demo-weu"
-  location            = data.azurerm_resource_group.main.location
-  resource_group_name = data.azurerm_resource_group.main.name
+  location            = data.azurerm_resource_group.jumphost_rg.location
+  resource_group_name = data.azurerm_resource_group.jumphost_rg.name
   size                = "Standard_B2s"
   admin_username      = "adm_ubuntu"
 

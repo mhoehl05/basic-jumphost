@@ -1,3 +1,8 @@
+variable "rg_name" {
+  type        = string
+  default     = ""
+}
+
 variable "snet_name" {
   type    = string
   default = ""

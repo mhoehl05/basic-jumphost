@@ -1,7 +1,7 @@
 resource "azurerm_network_security_group" "jumphost_nsg" {
   name                = "nsg-jumphost-demo-weu"
-  location            = data.azurerm_resource_group.main.location
-  resource_group_name = data.azurerm_resource_group.main.name
+  location            = data.azurerm_resource_group.jumphost_rg.location
+  resource_group_name = data.azurerm_resource_group.jumphost_rg.name
 
   security_rule {
     name                       = "SSH"
