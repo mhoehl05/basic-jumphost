@@ -17,6 +17,6 @@ resource "azurerm_network_security_group" "jumphost_nsg" {
 }
 
 resource "azurerm_network_interface_security_group_association" "jumphost_nsgassoc" {
-  network_interface_id      = azurerm_network_interface.jumphost.id
-  network_security_group_id = azurerm_network_security_group.jumphost.id
+  network_interface_id      = azurerm_network_interface.jumphost_nic.id
+  network_security_group_id = azurerm_network_security_group.jumphost_nsg.id
 }

@@ -6,7 +6,7 @@ resource "azurerm_linux_virtual_machine" "jumphost" {
   admin_username      = "adm_ubuntu"
 
   network_interface_ids = [
-    azurerm_network_interface.jumphost.id,
+    azurerm_network_interface.jumphost_nic.id,
   ]
 
   admin_ssh_key {
