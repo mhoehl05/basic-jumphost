@@ -1,6 +1,6 @@
 variable "rg_name" {
-  type        = string
-  default     = ""
+  type    = string
+  default = ""
 }
 
 variable "snet_id" {
@@ -8,7 +8,32 @@ variable "snet_id" {
   default = ""
 }
 
-variable "public_key_path" {
+variable "public_key_path_1" {
+  type    = string
+  default = ""
+}
+
+variable "public_key_path_2" {
+  type    = string
+  default = ""
+}
+
+variable "public_key_path_3" {
+  type    = string
+  default = ""
+}
+
+variable "admin_1" {
+  type    = string
+  default = ""
+}
+
+variable "admin_2" {
+  type    = string
+  default = ""
+}
+
+variable "admin_3" {
   type    = string
   default = ""
 }

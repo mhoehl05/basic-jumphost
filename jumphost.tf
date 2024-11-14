@@ -10,8 +10,18 @@ resource "azurerm_linux_virtual_machine" "jumphost" {
   ]
 
   admin_ssh_key {
-    username   = "adm_ubuntu"
-    public_key = file("${var.public_key_path}")
+    username   = var.admin_1
+    public_key = file("${var.public_key_path_1}")
+  }
+
+  admin_ssh_key {
+    username   = var.admin_2
+    public_key = file("${var.public_key_path_2}")
+  }
+
+  admin_ssh_key {
+    username   = var.admin_3
+    public_key = file("${var.public_key_path_3}")
   }
 
   os_disk {
