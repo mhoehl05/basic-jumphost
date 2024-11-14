@@ -3,24 +3,24 @@ resource "azurerm_linux_virtual_machine" "jumphost" {
   location            = data.azurerm_resource_group.jumphost_rg.location
   resource_group_name = data.azurerm_resource_group.jumphost_rg.name
   size                = "Standard_B2s"
-  admin_username      = "adm_ubuntu"
+  admin_username      = var.admin_name
 
   network_interface_ids = [
     azurerm_network_interface.jumphost_nic.id,
   ]
 
   admin_ssh_key {
-    username   = var.admin_1
+    username   = var.admin_name
     public_key = file("${var.public_key_path_1}")
   }
 
   admin_ssh_key {
-    username   = var.admin_2
+    username   = var.admin_name
     public_key = file("${var.public_key_path_2}")
   }
 
   admin_ssh_key {
-    username   = var.admin_3
+    username   = var.admin_name
     public_key = file("${var.public_key_path_3}")
   }
 

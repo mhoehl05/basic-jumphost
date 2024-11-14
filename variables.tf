@@ -23,17 +23,7 @@ variable "public_key_path_3" {
   default = ""
 }
 
-variable "admin_1" {
+variable "admin_name" {
   type    = string
-  default = ""
-}
-
-variable "admin_2" {
-  type    = string
-  default = ""
-}
-
-variable "admin_3" {
-  type    = string
-  default = ""
+  default = "adm_ubuntu"
 }
